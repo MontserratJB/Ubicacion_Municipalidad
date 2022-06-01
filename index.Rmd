@@ -4,4 +4,28 @@ output: html_document
 date: '2022-06-01'
 ---
 
-#XXXXXXXXX
+```{r cargalibreria}
+
+# Paquete para manipulación de datos
+library(dplyr)
+
+# Paquete para manejo de datos vectoriales
+library(sf)
+
+# Paquetes para manejo de datos raster
+library(terra)
+library(raster)
+
+# Paquete para mapas interactivos
+library(leaflet)
+```
+
+```{r cargadatos}
+# Lectura de una capa vectorial (GeoJSON) de ubicaion de la municipalidad
+muni <-
+  st_read(
+    "https://github.com/tpb728O-programaciongeoespacialr/2021ii/raw/main/datos/ign/delimitacion-territorial-administrativa/provincias.geojson",
+    quiet = TRUE
+  )
+```
+
