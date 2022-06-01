@@ -1,15 +1,6 @@
----
-title: "Untitled"
-output: html_document
-date: '2022-06-01'
----
-
-
-```{r}
 library(leaflet)
 
 m <- leaflet() %>%
   addTiles() %>%  # Add default OpenStreetMap map tiles
   addMarkers(lng=-84.05217, lat=9.93306, popup="Municipalidad")
 m  # Print the map
-```
