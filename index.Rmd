@@ -1,6 +1,10 @@
+
+```{r cargadatos, include=FALSE }
 library(leaflet)
 library(leaflet.extras)
+```
 
+```{r mapasbase, include=FALSE}
 #Carga de mapas base
 basemap <- leaflet() %>%
   # add different provider tiles
@@ -21,8 +25,13 @@ basemap <- leaflet() %>%
     # position it on the topleft
     position = "topleft"
   )
+```
+
+```{r cargaicono-mapa, include=FALSE}
+```
 
 
+```{r cargaicono, echo = FALSE}
 #Carga de icono para ubicación
 # Make a list of icons. We'll index into it based on name.
 greenLeafIcon <- makeIcon(
@@ -33,6 +42,10 @@ greenLeafIcon <- makeIcon(
 
 m <- basemap %>%
   addMarkers(lng=-84.05263, lat=9.93326, icon=greenLeafIcon, label="Municipalidad de Montes de Oca")
-m  # Print the map
+#Mapa
+m
+```
+
+
 
 
