@@ -16,7 +16,7 @@ basemap <- leaflet() %>%
   # add a layers control
   addLayersControl(
     baseGroups = c(
-      "OpenStreetMap", "Satelital"
+      "Satelital", "OpenStreetMap"
     ),
     # position it on the topleft
     position = "topleft"
@@ -24,14 +24,15 @@ basemap <- leaflet() %>%
 
 
 #Carga de icono para ubicación
-icon.fa <- makeAwesomeIcon(
-  icon = "landmark", markerColor = "red",
-  library = "fa",
-  iconColor = "black"
+# Make a list of icons. We'll index into it based on name.
+greenLeafIcon <- makeIcon(
+  iconUrl = "https://github.com/MontserratJB/Ubicacion_Municipalidad/blob/main/app/monumental.png?raw=true",
+  iconWidth = 30, iconHeight = 35,
+  iconAnchorX = 22, iconAnchorY = 22
 )
 
 m <- basemap %>%
-  addAwesomeMarkers(lng=-84.05263, lat=9.93326, label="Municipalidad de Montes de Oca", icon=icon.fa)
+  addMarkers(lng=-84.05263, lat=9.93326, icon=greenLeafIcon, label="Municipalidad de Montes de Oca")
 m  # Print the map
 
 
