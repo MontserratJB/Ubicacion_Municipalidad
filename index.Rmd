@@ -41,7 +41,7 @@ greenLeafIcon <- makeIcon(
 )
 
 m <- basemap %>%
-  addMarkers(lng=-84.05263, lat=9.93326, icon=greenLeafIcon, label="Municipalidad de Montes de Oca")
+  addMarkers(lng=-84.05247, lat=9.93316, icon=greenLeafIcon, label="Municipalidad de Montes de Oca")
 #Mapa
 m
 ```
