@@ -2,11 +2,12 @@
 ```{r cargadatos, include=FALSE }
 library(leaflet)
 library(leaflet.extras)
+
 ```
 
 ```{r mapasbase, include=FALSE}
 #Carga de mapas base
-basemap <- leaflet() %>%
+basemap <- leaflet(height=350, width = 350) %>%
   # add different provider tiles
   addProviderTiles(
     "OpenStreetMap",
@@ -25,9 +26,6 @@ basemap <- leaflet() %>%
     # position it on the topleft
     position = "topleft"
   )
-```
-
-```{r cargaicono-mapa, include=FALSE}
 ```
 
 
