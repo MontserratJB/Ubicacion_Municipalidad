@@ -21,7 +21,7 @@ basemap <- leaflet(height=250, width = 250) %>%
   # add a layers control
   addLayersControl(
     baseGroups = c(
-      "Satelital", "OpenStreetMap"
+      "OpenStreetMap", "Satelital"
     ),
     # position it on the topleft
     position = "topleft"
